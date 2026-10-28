@@ -7,14 +7,15 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug",
+      "name": "Day1Part1",
       "cargo": {
         "args": [
           "build",
-          "--manifest-path=${fileDirname}/../Cargo.toml",
+          "--manifest-path=${workspaceFolder}/day1/part1/Cargo.toml",
         ]
       },
-      "cwd": "${fileDirname}",
+      "args": [],
+      "cwd": "${workspaceFolder}/day1/part1",
       "sourceLanguages": [
         "rust"
       ]
