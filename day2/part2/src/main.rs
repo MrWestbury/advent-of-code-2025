@@ -5,9 +5,7 @@ use std::str;
 
 fn main() {
   println!("Day 1 - Part 1");
-
   let mut input_file:String = "../test.txt".to_string();
-
   let args: Vec<String> = env::args().collect();
   match args.len() {
     2 => {
