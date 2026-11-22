@@ -66,6 +66,14 @@ impl IngredientsDB {
     did_merge
   }
 
+  pub fn print_sorted_ranges(&self) {
+    let mut ranges = self.ingredient_ids.values().cloned().collect::<Vec<IngredientRange>>();
+    ranges.sort_by(|a, b| a.start.cmp(&b.start));
+    for rng in ranges {
+      println!("{:>15} - {:>15} - {}", rng.start, rng.end, rng.size());
+    }
+  }
+
   pub fn get_range_count(&self) -> usize {
     self.ingredient_ids.len()
   }

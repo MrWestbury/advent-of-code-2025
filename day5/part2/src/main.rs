@@ -1,4 +1,4 @@
-// Day 5, Part 1
+// Day 5, Part 2
 #[path="../../../modules/readdata.rs"]
 mod readdata;
 mod ingredients_db;
@@ -46,5 +46,5 @@ fn main() {
   println!("Range count: {}\nNums In Ranges: {}\nMerges: {merges}",
     ingredients_db.get_range_count(), 
     ingredients_db.total_nums_in_ranges());
-  
+  ingredients_db.print_sorted_ranges();
 }
